@@ -1,0 +1,102 @@
+.blog-section{
+	padding-top: 80px;
+}
+
+.blog-container{
+	display: flex;
+	justify-content: space-between
+}
+
+.box-blog{
+	flex-basis: 30%;
+}
+
+/*blog image*/
+
+.blog-image{
+	height: 200px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 2px;
+}
+
+.blog-image-1{
+	width: 100%;
+	background-image: url(../img/blog_image_1.jpg);
+}
+
+.blog-image-2{
+	width: 100%;
+	background-image: url(../img/blog_image_2.jpg);
+}
+
+.blog-image-3{
+	width: 100%;
+	background-image: url(../img/blog_image_3.jpg);
+}
+
+
+
+.blog-text{
+	padding: 10px;
+}
+
+.blog-text h2{
+	margin: 20px 0;
+	height: 60px;
+}
+
+.blog-text p{
+	letter-spacing: 1px;
+	height: 200px;
+}
+
+.blog-icon{
+	display: flex;
+	justify-content: space-between;
+}
+
+.blog-date{
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.blog-comment{
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.btn-blog{
+	color: #C1292E;
+	font-weight: 700;
+	letter-spacing: 1px;
+	cursor: pointer;
+	font-size: 15px;
+	transition: .3s;
+}
+
+.btn-blog:hover{
+	color: #555555;
+}
+
+
+/*font awesome*/
+
+.blog-icon i{
+	margin-right: 5px;
+}
+
+.blog-icon a{
+	color: #C1292E;
+	transition: .3s
+}
+
+.blog-icon a span{
+	color: #555555;
+	transition: .3s
+}
+
+.blog-icon span:hover{
+	color:#C1292E;
+}

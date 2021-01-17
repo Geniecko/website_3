@@ -1,0 +1,97 @@
+.section-header{
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../img/background_header.jpg);
+	height: 100vh;
+	width: 100%;
+}
+
+.dark-background{
+	background-color:rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+}
+
+.navigation{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+}
+
+.navigation-logo{
+	margin-left: 50px;
+	color: #eee;
+	font-weight: 700;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.navigation-links{
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	margin-right: 50px;
+}
+
+.navigation-link{
+	color: #eee;
+	padding: 10px 20px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	transition: .5s;
+	font-size: 14px;
+	border-radius: 20px;
+	border: 2px solid transparent;
+	margin-right: 10px;
+}
+
+.navigation-link:hover{
+	border: 2px solid #C1292E;
+}
+
+.header-text{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	color: #eee;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.header-text h1{
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 5px;
+	font-weight: 700;
+}
+
+.header-text h2{
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 30px;
+	font-weight: 500;
+}
+
+.header-buttons{
+	margin-top: 40px;
+}
+
+.header-buttons a{
+	color: #eee;
+	padding: 10px 20px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	transition: .5s;
+	font-size: 16px;
+	border-radius: 20px;
+	border: 2px solid transparent;
+	background-color: #C1292E;
+}
+
+.header-buttons a:hover{
+	background-color: transparent;
+	border: 2px solid #C1292E;
+}
