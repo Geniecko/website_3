@@ -27,7 +27,7 @@
 .contact-form input{
 	margin-bottom: 20px;
 	padding: 10px 15px;
-	width: 400px;
+	width: 25vw;
 	height: 40px;
 	font-weight:600;
 	color: #555555;
@@ -120,4 +120,65 @@
 
 .contact-info p{
 	margin-top: 10px;
+}
+
+@media only screen and (max-device-width: 800px){
+	.section-contact{
+		padding-top: 10vh;
+		padding-bottom: 7vh;
+	}
+	
+	.contact-container{
+		flex-direction: column;
+	}
+	
+	.contact-form label{
+		font-size: 1.5vh;
+	}
+
+	.contact-form input{
+		width: 60vw;
+		height: 4vh;
+		font-size: 1.5vh;
+	
+	}
+
+	.contact-form textarea{
+		width: 70vw;
+		height: 15vh;
+		font-size: 1.5vh;
+	}
+	
+	.contact-btn{
+		font-size: 1.5vh;
+		padding: 0.5vh 2vh;
+	}
+	
+	.contact-form{
+		margin-bottom: 8vh;
+	}
+	
+	.icon-social-media{
+		justify-content: space-around;
+	}
+	
+	.facebook-icon i, .twitter-icon i{
+		font-size: 10vh;
+	}
+
+	.facebook-icon p, .twitter-icon p{
+		font-size: 1.5vh;
+		margin-top: 3vh;
+	}
+
+	.contact-info{
+		margin-top: 8vh;
+	}
+
+	.contact-info p{
+		margin-top: 3vh;
+		font-size: 1.5vh;
+		text-align: center;
+	}
+
 }

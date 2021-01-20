@@ -4,7 +4,7 @@
 
 .blog-container{
 	display: flex;
-	justify-content: space-between
+	justify-content: space-between;
 }
 
 .box-blog{
@@ -99,4 +99,54 @@
 
 .blog-icon span:hover{
 	color:#C1292E;
+}
+
+@media only screen and (max-device-width: 800px){
+	.blog-section{
+		padding-top: 10vh;
+	}
+	
+	.blog-container{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.box-blog{
+		margin-bottom: 10vh;
+		width: 65vw;
+	}
+	
+	.blog-image{
+		height: 40vh;
+	}
+
+	.blog-text{
+		height: 30vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		
+	}
+
+	.blog-text h2{
+		font-size: 3vh;
+	}
+
+	.blog-text p{
+		font-size: 1.7vh;
+	}
+
+	.blog-date{
+		font-size: 1.5vh;
+	}
+
+	.blog-comment{
+		font-size: 1.5vh;
+	}
+
+	.btn-blog{
+		font-size: 1.5vh;
+	}
+
 }

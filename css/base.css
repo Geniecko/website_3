@@ -52,4 +52,22 @@ button{
 	font-family: 'Raleway', sans-serif;
 }
 
+/*media queries*/
+
+@media only screen and (max-device-width: 1300px){
+	.container{
+		width: 85vw;
+	}
+	
+	.headline h1{
+		font-size: 4vh;
+	}
+	
+	.headline h1::after{
+		width: 10vw;
+		height: 5px;
+	}
+}
+
+
 

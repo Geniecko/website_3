@@ -81,9 +81,7 @@
 
 .text-services h3{
 	margin: 20px 0;
-	font-weight: 700;
-	text-transform: uppercase;
-
+	font-weight: 600;
 	font-size: 20px;
 }
 .text-services p{
@@ -184,6 +182,64 @@
 	color: #a0a0a0;
 }
 
+@media only screen and (max-device-width: 800px){
+	.services-section{
+		padding-top: 10vh;
+	}
+	
+	.container-services{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	 
+	.box-services{
+		width: 65vw;
+		margin-bottom: 10vh;
+	}
+	
+	.box-services:first-child{
+		margin-top: 4.5vh;
+	}
+	
+	.image-services{
+		height: 40vh;
+	}
+	
+	.text-services{
+		height: 30vh;
+	}
+	
+	.text-services h3{
+		font-size: 3vh;
+		margin-top: 3vh;
+	}
+	.text-services p{
+		font-size: 1.7vh;
+		margin-top: 2vh;
+	}
+
+	.btn-services{
+		padding: 1vh 3vh;
+		font-size: 1.5vh;
+	}
+	
+	.accordion-title{
+		height: 5vh;
+		line-height: 5vh;
+		font-size: 1.8vh;
+	}
+	
+	.accordion-text{
+		font-size: 1.5vh;
+	}
+	
+	.services-question{
+		padding: 0;
+		padding-bottom: 5vh;
+	}
+
+}
 
 
 

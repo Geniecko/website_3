@@ -92,7 +92,56 @@
 	background-color: #C1292E;
 }
 
+.header-buttons a:first-child{
+	margin-right: 20px;
+}
+
 .header-buttons a:hover{
 	background-color: transparent;
 	border: 2px solid #C1292E;
+}
+
+@media only screen and (max-device-width: 800px){
+	.navigation-logo{
+		font-size: 4vh;
+		margin-top:5vh;
+		margin-left: 5vh;
+	}
+	
+	.navigation-links{
+		display: none;
+	}
+	
+	.header-text{
+		width: 70vw;
+	}
+	
+	.header-text h1{
+		font-size: 4vh;
+	}
+	
+	.header-text h2{
+		font-size: 2vh;
+	}
+	
+	.header-text p{
+		font-size: 1.5vh;
+	}
+	
+	.header-buttons{
+		margin-top: 3vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.header-buttons a:first-child{
+		margin-right: 0;
+	}
+	
+	.header-buttons a{
+		font-size: 2vh;
+		width: 25vw;
+		margin-bottom: 1.5vh;
+	}
 }

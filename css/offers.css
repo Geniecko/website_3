@@ -61,5 +61,58 @@
 	font-size: 18px;
 }
 
+@media only screen and (max-device-width: 800px){
+	.offers-section{
+		padding: 10vh 0;
+	}
+
+	.offers-container{
+		display: grid;
+		grid-template-columns: repeat(1,0.7fr);
+		justify-content: center;
+	}
+	
+	.offer-box{
+		height: 50vh;
+		justify-content: space-between;
+		margin-top: 5vh;
+	}
+	
+	.offer-amount{
+		padding-top: 5vh;
+		height: 20vh;
+	}
+
+	.offer-amount h2{
+		font-size: 3.5vh;
+	}
+
+	.offer-amount p{
+		font-size: 2vh;
+	}
+	
+	.offer-amount span{
+		font-size: 3.5vh;
+	}
+
+	.offer-details{
+		height: 10vh;
+		font-size: 1.7vh;
+		font-weight: 600;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.offer-details:last-child{
+		height: 7vh;
+	}
+	
+	.offer-details:last-child:hover{
+		font-size: 1.7vh;
+	}
+	
+}
+
 
 

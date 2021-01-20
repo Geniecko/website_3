@@ -1,9 +1,9 @@
 (function($){
 	$(document).ready(function(){
 		
-		// $(window).on("load", function(){
-		// 	$(".loader-wrapper").fadeOut(1000);
-		// });
+//		 $(window).on("load", function(){
+//		 	$(".loader-wrapper").fadeOut(1000);
+//		 });
 		
 //		background-header move on scroll
 		$(window).on("scroll",function(event) {
