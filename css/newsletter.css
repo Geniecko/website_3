@@ -1,13 +1,12 @@
 .section-newsletter{
 	height: 400px;
-	background-color: #007b7b;
 	position: relative;
 	width: 100%;
+	background-image: url(../img/newsletter_bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-.image-newsletter{
-	
-}
 
 .newsletter-text{
 	text-align: center;

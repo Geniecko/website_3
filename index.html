@@ -19,6 +19,9 @@
 	<link rel="stylesheet" href="css/offers.css">
 	<link rel="stylesheet" href="css/newsletter.css">
 	<link rel="stylesheet" href="css/clients.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheet" href="css/loader.css">
 <!--jQuery CDN-->
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <!--	animate css-->
@@ -31,17 +34,17 @@
 </head>
 <body>
 	
-	<header class="section-header">
+	<header class="section-header" id="home">
 		<div class="dark-background">
 			<nav class="navigation">
 				<div class="navigation-logo">HEROES <span style="color:#C1292E;">GYM</span></div>
 
 				<ul class="navigation-links">
-					<li><a href="#" class="navigation-link">HOME</a></li>
-					<li><a href="#" class="navigation-link">ABOUT</a></li>
-					<li><a href="#" class="navigation-link">OUR SERVICES</a></li>
-					<li><a href="#" class="navigation-link">BLOG TRANING</a></li>
-					<li><a href="#" class="navigation-link">CONTACT</a></li>
+					<li><a href="#home" class="navigation-link">HOME</a></li>
+					<li><a href="#about" class="navigation-link">ABOUT</a></li>
+					<li><a href="#services" class="navigation-link">OUR SERVICES</a></li>
+					<li><a href="#blog" class="navigation-link">BLOG TRANING</a></li>
+					<li><a href="#contact" class="navigation-link">CONTACT</a></li>
 				</ul>
 			</nav>
 
@@ -50,14 +53,14 @@
 				<h2>OF EXPIERENCE IN THE MARKET</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor qui ea corporis provident cupiditate dolores officia eligendi, veritatis id, nobis doloribus velit consequatur explicabo ipsum!</p>
 				<div class="header-buttons">
-					<a href="" style = "margin-right: 20px">START</a>
-					<a href="">CONTACT US</a>
+					<a href="#about" style = "margin-right: 20px">START</a>
+					<a href="#contact">CONTACT US</a>
 				</div>
 			</div>
 		</div>
 	</header>
 	
-	<section class="section-about">
+	<section id="about" class="section-about" >
 		<div class="container container-about">
 			<div class="text-about">
 				<h2>our mission</h2>
@@ -75,10 +78,7 @@
 		
 		<div class="number-about">
 			<div class="container container-about">
-				<div class="box-number" 
-					data-aos="slide-right"
-					 data-aos-duration="1000"
-				>
+				<div class="box-number">
 					10
 					<p>YEARS OF EXPIERENCE</p>
 				</div>
@@ -86,14 +86,11 @@
 					15
 					<p>QUALIFIED SPECIALISTS</p>
 				</div>
-				<div class="box-number" style="border-right: 10px solid white;">
+				<div class="box-number" style="border-right: 2px solid #eee;">
 					6
 					<p>built gym</p>
 				</div>
-				<div class="box-number"
-					  data-aos="slide-left"
-					  data-aos-duration="1000"
-				>
+				<div class="box-number">
 					100%
 					<p>satisfaction </p>
 				</div>
@@ -101,7 +98,7 @@
 		</div>
 	</section>
 	
-	<section class="services-section">
+	<section class="services-section" id="services">
 		<div class="headline">
 			<h1>Our Services</h1>
 		</div>
@@ -180,7 +177,7 @@
 		</div>
 	</section>
 		
-	<section class="blog-section">
+	<section class="blog-section" id="blog">
 		<div class="headline">
 			<h1>Latest From The Blog</h1>
 		</div>
@@ -195,7 +192,7 @@
 					<div class="blog-icon">
 						<div class="blog-date"><a href="#"><i class="far fa-clock"></i><span>Jan 4, 2021</span></a></div>
 						<div class="blog-comment"><a href="#"><i class="far fa-comment"></i><span>12</span></a></div>
-						<button class="btn-blog">Read More</button>
+						<a href="#"><button class="btn-blog">Read More</button></a>
 					</div>
 				</div>
 			</div>
@@ -209,7 +206,7 @@
 					<div class="blog-icon">
 						<div class="blog-date"><a href="#"><i class="far fa-clock"></i><span>Jan 4, 2021</span></a></div>
 						<div class="blog-comment"><a href="#"><i class="far fa-comment"></i><span>12</span></a></div>
-						<button class="btn-blog">Read More</button>
+						<a href="#"><button class="btn-blog">Read More</button></a>
 					</div>
 				</div>
 			</div>
@@ -223,7 +220,7 @@
 					<div class="blog-icon">
 						<div class="blog-date"><a href="#"><i class="far fa-clock"></i><span>Jan 4, 2021</span></a></div>
 						<div class="blog-comment"><a href="#"><i class="far fa-comment"></i><span>12</span></a></div>
-						<button class="btn-blog">Read More</button>
+						<a href="#"><button class="btn-blog">Read More</button></a>
 					</div>
 				</div>
 			</div>
@@ -237,7 +234,9 @@
 		</div>
 	
 		<div class="container offers-container">
-			<div class="offer-box">
+			<div class="offer-box"
+				  data-aos="zoom-in"
+				  data-aos-duration="700">
 				<div class="offer-amount">
 					<h2>BASIC</h2>
 					<p>$<span>30</span>/mo</p>
@@ -245,9 +244,12 @@
 				<div class="offer-details">Diet</div>
 				<div class="offer-details">Traning Plan</div>
 				<div class="offer-details">---</div>
-				<div class="offer-details">GET STARTED</div>
+				<a href="#"><div class="offer-details">GET STARTED</div></a>
 			</div>
-			<div class="offer-box">
+			<div class="offer-box"
+				  data-aos="zoom-in"
+				  data-aos-duration="700"
+				  data-aos-delay="300">
 				<div class="offer-amount">
 					<h2>STANDARD</h2>
 					<p>$<span>60</span>/mo</p>
@@ -255,9 +257,12 @@
 				<div class="offer-details">Personal Diet</div>
 				<div class="offer-details">Personal Traning</div>
 				<div class="offer-details">Online Meeting </div>
-				<div class="offer-details">GET STARTED</div>
+				<a href="#"><div class="offer-details">GET STARTED</div></a>
 			</div>
-			<div class="offer-box">
+			<div class="offer-box"
+				  data-aos="zoom-in"
+				  data-aos-duration="700"
+				  data-aos-delay="600">
 				<div class="offer-amount">
 					<h2>GOLD</h2>
 					<p>$<span>250</span>/mo</p>
@@ -266,9 +271,12 @@
 				<div class="offer-details">Personal Traning</div>
 				<div class="offer-details">Personal 
 					Consultation</div>
-				<div class="offer-details">GET STARTED</div>
+				<a href="#"><div class="offer-details">GET STARTED</div></a>
 			</div>
-			<div class="offer-box">
+			<div class="offer-box"
+				  data-aos="zoom-in"
+				  data-aos-duration="700"
+				  data-aos-delay="900">
 				<div class="offer-amount">
 					<h2>PLATINIUM</h2>
 					<p>$<span>330</span>/mo</p>
@@ -277,20 +285,18 @@
 				<div class="offer-details">Personal Traning</div>
 				<div class="offer-details">Personal 
 					Consultation</div>
-				<div class="offer-details">GET STARTED</div>
+				<a href="#"><div class="offer-details">GET STARTED</div></a>
 			</div>
 		</div>
 	</section>
 		
 	<section class="section-newsletter">
-		<div class="image-newsletter">
 			<div class="newsletter-text">
 				<h1>Subscribe to Our Newsletter</h1>
 				<p>Sign up to our newsletter subscription and be the first to know about the latest company news, special offers and discounts</p>
 				<input type="email" placeholder="name@example.com">
-				<button class = "btn-newsletter">Subscribe</button>
+				<a href="#"><button class = "btn-newsletter">Subscribe</button></a>
 			</div>
-		</div>
 	</section>
 		
 	<section class="section-clients-slider">
@@ -365,9 +371,99 @@
 		</div>
 	</section>
 			
+	<section class="section-contact" id="contact">
+		<div class="headline">
+			<h1>Contact Us</h1>
+		</div>
+		<div class="container contact-container">
+			<div class="contact-form">
+				<form>
+					<label>Full Name</label>
+					<input type="text">
+					<label>E-mail</label>
+					<input type="email">
+					<label>Message</label>
+					<textarea name="message" id="message"></textarea>
+				</form>
+				<a href="#"><button class="contact-btn">SUBMIT</button></a>
+			</div>
+			<div class="contact-social-media">
+				<div class="icon-social-media">
+					<div class="facebook-icon">
+						<a href="#">
+							<i class="fab fa-facebook"></i>
+							<p>Like Us on Facebook</p>
+						</a>
+					</div>
+					<div class="twitter-icon">
+						<a href="#">
+							<i class="fab fa-twitter"></i>
+							<p>Like Us on Twitter</p>
+						</a>
+					</div>
+				</div>
+				<div class="contact-info">
+					<p><span>Phone:</span>  0121 496 0337</p>
+					<p><span>Fax:</span>  0121 496 0337</p>
+					<p><span>E-mail:</span>  gymheroes@example.com</p>
+					<p><span>Adress:</span>
+						96 Marcham Road <br>
+						BORROWFIELD <br>
+						AB3 9TS
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+			
 	<footer class="section-footer">
-		
+		<div class="container footer-container">
+			<div class="info-footer">
+				<div class="footer-logo">HEROES <span style="font-weight: 800">GYM</span></div>
+				<p class="footer-text">We are always ready to help you!</p>
+				<p class="footer-phone"><span><i class="fas fa-phone-square-alt"></i></span> 0121 496 0337</p>
+				<p class="footer-fax"><span><i class="fas fa-fax"></i></span> 0121 496 0337</p>
+				<p class="footer-email"><span><i class="fas fa-envelope-square"></i></span> gymheroes@example.com</p>
+			</div>
+			<div class="navigation-footer">
+				<h3>NAVIGATION</h3>
+				<ul class="footer-navigation-links">
+					<li><a href="#home" class="footer-navigation-link">HOME</a></li>
+					<li><a href="#about" class="footer-navigation-link">ABOUT</a></li>
+					<li><a href="#services" class="footer-navigation-link">OUR SERVICES</a></li>
+					<li><a href="#blog" class="footer-navigation-link">BLOG TRANING</a></li>
+					<li><a href="#contact" class="footer-navigation-link">CONTACT</a></li>
+				</ul>
+			</div>
+			<div class="social-media-footer">
+				<div class="footer-visitors">
+					<strong>23 324</strong>VISITORS
+				</div>
+				<div class="footer-clients">
+					<strong>1 342</strong>CLIENTS
+				</div>
+				<div class="footer-newsletter">
+					<p>Subscribe to our newsletter to get important news and amazing offers.</p>
+					<div class="footer-newsletter-input">
+						<input placeholder="Enter Your email" type="text">
+						<a href="#"><button>SUBSCRIBE</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			&copy; 2021, All Rights Reserved... Geniecko
+		</div>
 	</footer>		
+	
+	<div class="loader-wrapper">
+		<p>LOADING </p>
+		<div class="loader">
+
+		</div>
+	</div>
+	
+<!--	SCRIPT-->
 	
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>

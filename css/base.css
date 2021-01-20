@@ -10,6 +10,8 @@ body{
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	color: #555555;
+	background-color: #eee;
+	overflow-x: hidden;
 }
 
 a{
@@ -17,8 +19,12 @@ a{
 	cursor: pointer;
 }
 
+button:focus{
+	outline: none;
+}
+
 .container{
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 

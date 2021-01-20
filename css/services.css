@@ -1,5 +1,7 @@
 .services-section{
 	padding-top: 80px;
+	background-color: white;
+	padding-bottom: 50px;
 }
 
 .container-services{
@@ -9,10 +11,8 @@
 
 .box-services{
 	flex-basis: 31%;
-	border: 2px solid #eee;
 	height: 500px;
 	position: relative;
-	box-shadow: 0px 0px 10px 2px #eee;
 	border-radius: 5px;
 }
 
@@ -96,37 +96,32 @@
 .btn-services{
 	position: absolute;
 	bottom: 30px;
-	color: #eee;
 	padding: 10px 20px;
 	letter-spacing: 1px;
 	font-weight: 600;
 	transition: .5s;
 	font-size: 14px;
 	border-radius: 2px;
-	border: 2px solid #C1292E;
-	background-color: white;
+	border: 2px solid transparent;
+	background-color: #C1292E;
 	cursor: pointer;
 	text-transform: uppercase;
-	color: #C1292E;
+	color: #eee;
 }
 
 .btn-services:hover{
-	background-color:#C1292E;
-	color:#eee;
+	background-color:transparent;
+	color: #C1292E;
+	border: 2px solid #C1292E;
 }
 
 /*------question------*/
 
 .services-question{
-	padding:80px 0;
+	padding-top: 40px;
 }
 
 .box-question{
-/*
-	border: 2px solid #eee;
-	box-shadow: 0px 0px 10px 2px #eee;
-	border-radius: 5px;
-*/
 	padding: 20px 30px 40px 30px;
 }
 
@@ -168,10 +163,12 @@
 	border-radius: 5px;
 	background-color: 
 }
+
 .accordion-title--active {
 	color: #C1292E;
 	background-color: white;
 }
+
 .accordion-title--active:after {
 	color: #C1292E;
 }
