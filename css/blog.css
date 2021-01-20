@@ -101,7 +101,7 @@
 	color:#C1292E;
 }
 
-@media only screen and (max-device-width: 800px){
+@media only screen and (max-device-width: 600px){
 	.blog-section{
 		padding-top: 10vh;
 	}

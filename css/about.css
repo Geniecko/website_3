@@ -71,7 +71,7 @@
 	text-transform: uppercase;
 }
 
-@media only screen and (max-device-width: 800px){
+@media only screen and (max-device-width: 600px){
 	.section-about{
 		padding-top: 15vh;
 	}

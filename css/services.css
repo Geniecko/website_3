@@ -182,7 +182,7 @@
 	color: #a0a0a0;
 }
 
-@media only screen and (max-device-width: 800px){
+@media only screen and (max-device-width: 600px){
 	.services-section{
 		padding-top: 10vh;
 	}

@@ -169,7 +169,7 @@
 	line-height: 50px;
 }
 
-@media only screen and (max-device-width: 800px){
+@media only screen and (max-device-width: 600px){
 	.section-footer{
 		padding-top: 10vh;
 		height: auto;

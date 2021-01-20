@@ -101,7 +101,7 @@
 	border: 2px solid #C1292E;
 }
 
-@media only screen and (max-device-width: 800px){
+@media only screen and (max-device-width: 600px){
 	.navigation-logo{
 		font-size: 4vh;
 		margin-top:5vh;
@@ -141,7 +141,8 @@
 	
 	.header-buttons a{
 		font-size: 2vh;
-		width: 25vw;
+		width: 40vw;
 		margin-bottom: 1.5vh;
+		border-radius: 5vh;
 	}
 }
