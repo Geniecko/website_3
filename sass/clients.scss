@@ -1,0 +1,121 @@
+@import "_mixins.scss";
+
+/*clients.scss */
+
+.section-clients-slider{
+	padding-top: 80px;
+	padding-bottom: 90px;
+	background-color: white;
+}
+
+.item{
+	width: 480px;
+	text-align: center;
+	padding: 0 40px;
+	position: relative;
+	cursor: grab;
+
+     h3{
+          margin: 30px 0;
+     }
+
+     p{
+          color:lighten($fontColorDark, 25%);
+          font-size: 1.1rem;
+     }
+
+     &:focus{
+          outline: none;
+     }
+
+     .client-stars{
+          color: #ffd700;
+          margin: 0 auto;
+          margin-top: 30px;
+     }
+}
+
+.client-image{
+	@include backgroundImage(150px);
+	width: 150px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+@include repeatClass("client-image", "client_image", 2);
+
+.slick-slide{
+	transform: scale(0.8);
+	opacity: .3;
+	transition: all ease 0.5s;
+}
+
+.slick-current{
+	transform: scale(1);
+	opacity: 1;
+}
+
+
+.slick-slider .slick-arrow::before{
+	z-index: 99;
+	color: $redColor;
+	font-size: 3rem;
+}
+
+@media only screen and (max-device-width: 1024px){
+	.slick-slide{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-device-width: 600px){
+	.section-clients-slider{
+		padding-top: 10vh;
+		padding-bottom: 10vh;
+
+          .container{
+               width: 90vw;
+          }
+	}
+	
+	.slider{
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.item{
+		display: flex;
+		flex-direction: column;
+		height: 40vh;
+		margin-top: 5vh;
+		justify-content: space-between;
+		align-items: center;
+
+          .client-stars{
+               font-size: 2rem;
+          }
+          h3{
+               font-size: 3rem;
+          }
+     
+          p{
+               font-size: 1.8rem;
+          }
+	}
+
+	.client-image{
+		width: 15vh;
+		height: 15vh;
+	}
+	
+	.slider{
+		display: flex;
+		
+	}
+
+     .slick-prev::before{
+          right: 20px;
+     }
+}
+

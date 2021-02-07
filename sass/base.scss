@@ -1,0 +1,92 @@
+@import "_mixins.scss";
+
+/*   red color : #C1292E 
+     base.scss
+*/
+
+*{	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: $fontType;
+	font-size: $fontSize;
+	color: $fontColorDark;
+	background-color: $bgColor;
+	overflow-x: hidden;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+button{
+	background-color: transparent;
+	border:none;
+     font-family: 'Raleway', sans-serif;
+     
+     &:focus{
+          outline: none;
+     }
+}
+
+.container{
+	max-width: $containerWidth;
+	margin: 0 auto;
+}
+
+.headline{
+
+     h1{
+          text-align: center;
+	     padding-bottom: 80px;
+	     font-weight: 600;
+          font-size: $fontSizeHeadline;
+          
+          &::after{
+               display: block;
+               content: "";
+               width: 75px;
+               height: 3px;
+               background-color: $redColor;
+               border-radius: 3px;
+               margin: 0 auto;
+               margin-top: 20px;
+          }
+     }
+	
+}
+
+@media only screen and (max-device-width: 1300px){
+	.container{
+		width: 85vw;
+     }
+     
+	.headline h1::after{
+		width: 15vw;
+		height: 5px;
+	}
+}
+
+@media only screen and (max-device-width: 600px){
+	.container{
+		width: 85vw;
+	}
+
+	.headline h1{
+		font-size: 3.5em;
+	}
+}
+
+@import "header";
+@import "about";
+@import "services";
+@import "blog";
+@import "offers";
+@import "newsletter";
+@import "clients";
+@import "contact";
+@import "footer";

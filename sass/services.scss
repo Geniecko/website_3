@@ -1,0 +1,242 @@
+@import "_mixins.scss";
+
+
+
+/* services.scss */
+
+.services-section{
+	padding-top: 80px;
+	background-color: white;
+	padding-bottom: 50px;
+}
+
+.container-services{
+	display: flex;
+	justify-content: space-between;
+}
+
+.box-services{
+	flex-basis: 31%;
+	height: 500px;
+	position: relative;
+	border-radius: 5px;
+     background-color: $bgColor;
+     box-shadow: 0px 0px 10px 2px rgb(221, 221, 221);
+
+     .image-services{
+          @include backgroundImage(250px);
+     }
+     
+	@include repeatClass("image-services-", "img_services", 3);
+}
+
+.opacity-image{
+	position: absolute;
+	background-color: #151515;
+	opacity: .8;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+	color: $fontColorWhite;
+	display: none;
+
+     h4{
+          margin-top: 70px;
+	     font-size: 1.2rem;
+	     font-weight: 700;
+	     letter-spacing: 0.5px;
+     }
+     
+     p{
+          margin-top: 20px;
+	     font-weight: 500;
+	     letter-spacing: 0.5px;
+          text-transform: capitalize;
+          font-size: 0.9rem;
+     }
+}
+
+.text-services{
+	padding: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+     h3{
+          margin: 20px 0;
+	     font-weight: 600;
+	     font-size: 1.2rem;
+          
+     }
+
+     p{
+          font-size: 16px;
+	     font-weight: 400;
+	     letter-spacing: 0.5px;
+	     color: lighten($fontColorDark, 25%)
+     }
+
+     .btn-services{
+          position: absolute;
+          bottom: 30px;
+
+          
+          @include roundButton;
+
+          font-size: 0.9rem;
+          border: 2px solid transparent;
+          background-color: $redColor;
+          color: $fontColorWhite;
+
+          &:hover{
+               background-color:transparent;
+	          color: $redColor;
+	          border: 2px solid $redColor;
+          }
+     }
+}
+
+.services-question{
+	padding-top: 40px;
+}
+
+.box-question{
+	padding: 20px 30px 40px 30px;
+}
+
+.accordion-title{
+	height:45px;
+	margin-top:20px;
+	position: relative;
+	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 45px;
+	transition: .4s !important ;
+	border: 2px solid $redColor;
+	border-radius: 25px;
+	padding-left: 20px;
+	letter-spacing: 0.5px;
+	background-color:$redColor;
+	color: $fontColorWhite;;
+
+     &:hover{
+          background-color:transparent;
+	     color:$redColor;
+     }
+
+     &:after{
+          content: "\271A";
+	     display: inline-block;
+	     width: 50px;
+	     height: 105%;
+	     position: absolute;
+	     top: -1px;
+          right: -1px;
+          cursor: pointer;
+          font-size: 1rem;
+          text-align: center;
+          color:$fontColorWhite;
+          border-radius: 25px;
+          background-color: $redColor;
+     }
+}
+
+.accordion-title--active {
+	color: $redColor;
+	background-color: white;
+
+     &:after{
+          color: $fontColorWhite;
+          content: "\268A";
+     }
+}
+
+.accordion-text {
+	padding: 20px;
+	border: 2px solid $bgColor;
+	margin-top:20px;
+	font-size: 1rem;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	font-weight: 400;
+	color: lighten($fontColorDark, 25%);
+     border-radius: 25px;
+}
+
+@media only screen and (max-device-width: 600px){
+	.services-section{
+		padding-top: 10vh;
+	}
+	
+	.container-services{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	 
+	.box-services{
+		width: 65vw;
+		margin-bottom: 10vh;
+
+          &:first-child{
+               margin-top: 4.5vh;
+          }
+
+          .image-services{
+               height: 40vh;
+          }
+
+          .text-services{
+               height: 30vh;
+          }
+	}
+	
+	
+	.text-services{
+          h3{
+               font-size: 3rem;
+               margin-top: 3vh;
+          }
+
+          p{
+               font-size: 1.8rem;
+               letter-spacing: 0px;
+               margin-top: 2vh;
+          }
+          
+          .btn-services{
+               padding: 0.7em 1.4em;
+               font-size: 1.5rem;
+          }
+     }
+	
+     .services-question{
+		padding: 0;
+		padding-bottom: 5vh;
+	}
+
+	.accordion-title{
+		height: 5vh;
+		line-height: 5vh;
+		font-size: 2em;
+
+          &:after{
+               background-color: transparent;
+          }
+	}
+
+     
+     .accordion-title--active {
+          &:after{
+               color: $redColor;   
+          }
+     }
+
+}
+
+
+

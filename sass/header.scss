@@ -1,10 +1,9 @@
+@import "_mixins.scss";
+
+/* header.scss */
+
 .section-header{
-	position: relative;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url(../img/background_header.jpg);
-	height: 100vh;
-	width: 100%;
+	@include backgroundHeaderImage("background_header.jpg")
 }
 
 .dark-background{
@@ -22,10 +21,14 @@
 
 .navigation-logo{
 	margin-left: 50px;
-	color: #eee;
+	color: $fontColorWhite;
 	font-weight: 700;
-	font-size: 24px;
+	font-size: 1.8em;
 	cursor: pointer;
+
+	span{
+		color: $redColor;
+	}
 }
 
 .navigation-links{
@@ -33,23 +36,18 @@
 	display: flex;
 	justify-content: space-around;
 	list-style: none;
-	margin-right: 50px;
-}
-
-.navigation-link{
-	color: #eee;
-	padding: 10px 20px;
-	letter-spacing: 1px;
-	font-weight: 500;
-	transition: .5s;
-	font-size: 14px;
-	border-radius: 20px;
-	border: 2px solid transparent;
-	margin-right: 10px;
-}
-
-.navigation-link:hover{
-	border: 2px solid #C1292E;
+     margin-right: 50px;
+     
+     .navigation-link{
+          @include roundButton;
+          font-size:0.9em;
+		border: 2px solid transparent;
+		color: $fontColorWhite;
+          
+          &:hover{
+               border: 2px solid $redColor;
+          }
+     }
 }
 
 .header-text{
@@ -57,66 +55,66 @@
 	left: 50%;
 	top:50%;
 	transform: translate(-50%,-50%);
-	color: #eee;
+	color: $fontColorWhite;
 	text-align: center;
 	letter-spacing: 1px;
-}
 
-.header-text h1{
-	font-size: 40px;
-	text-align: center;
-	margin-bottom: 5px;
-	font-weight: 700;
-}
+	h1{
+		font-size: 2.5em;
+		text-align: center;
+		margin-bottom: 5px;
+		font-weight: 700;
+	}
 
-.header-text h2{
-	font-size: 24px;
-	text-align: center;
-	margin-bottom: 30px;
-	font-weight: 500;
+	h2{
+		font-size: 1.4em;
+		text-align: center;
+		margin-bottom: 30px;
+		font-weight: 500;
+	}
 }
 
 .header-buttons{
 	margin-top: 40px;
+
+	a{
+		@include roundButton;
+		color: $fontColorWhite;
+		border: 2px solid transparent;
+		background-color: $redColor;
+
+		&:first-child{
+			margin-right: 20px;
+		}
+
+		&:hover{
+			background-color: transparent;
+			border: 2px solid $redColor;
+		}
+	}
 }
 
-.header-buttons a{
-	color: #eee;
-	padding: 10px 20px;
-	letter-spacing: 1px;
-	font-weight: 500;
-	transition: .5s;
-	font-size: 16px;
-	border-radius: 20px;
-	border: 2px solid transparent;
-	background-color: #C1292E;
-}
+//mobile navigation
 
-.header-buttons a:first-child{
-	margin-right: 20px;
-}
-
-.header-buttons a:hover{
-	background-color: transparent;
-	border: 2px solid #C1292E;
-}
 
 .burger{
 	display: none;
+
+	div{
+		width: 5vh;
+		height: .5vh;
+		background-color: #eee;
+		margin: 0.7vh;
+		border-radius: 10px;
+		transition: all 0.3s ease;
+	}
 }
 
-.burger div{
-	width: 5vh;
-	height: .5vh;
-	background-color: #eee;
-	margin: 0.7vh;
-	border-radius: 10px;
-	transition: all 0.3s ease;
-}
+// mobile 
 
 @media only screen and (max-device-width: 600px){
 	.navigation-logo{
-		font-size: 4vh;
+		font-size: 5em;
 		margin-top:5vh;
 		margin-left: 5vh;
 	}
@@ -127,18 +125,18 @@
 	
 	.header-text{
 		width: 70vw;
-	}
-	
-	.header-text h1{
-		font-size: 4vh;
-	}
-	
-	.header-text h2{
-		font-size: 2vh;
-	}
-	
-	.header-text p{
-		font-size: 1.5vh;
+
+		h1{
+			font-size: 4em;
+		}
+
+		h2{
+			font-size: 2em;
+		}
+
+		p{
+			font-size: 1.5em;
+		}
 	}
 	
 	.header-buttons{
@@ -146,20 +144,19 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		a{
+			font-size: 2.2em;
+			width: 35vw;
+			margin-bottom: 1.5vh;
+
+			&:first-child{
+				margin-right: 0;
+			}
+		}
 	}
-	
-	.header-buttons a:first-child{
-		margin-right: 0;
-	}
-	
-	.header-buttons a{
-		font-size: 2vh;
-		width: 40vw;
-		margin-bottom: 1.5vh;
-		border-radius: 5vh;
-	}
-	
-	/*	burger*/
+
+	//burger nav
 
 	.navigation{
 		line-height: normal;
@@ -179,11 +176,11 @@
 		align-items: center;	
 		opacity: 0;
 		transition: 0.7s;
-	}
-	
-	.navigation-link{
-		font-size: 2em;
-		opacity: 0;
+
+		.navigation-link{
+			font-size: 2em;
+			opacity: 0;
+		}
 	}
 	
 	.active-links{
@@ -197,6 +194,8 @@
 		display: block;
 	}
 }
+
+//animation mobile link
 
 @keyframes navLinkFade {
 	from{
