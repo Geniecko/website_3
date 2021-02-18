@@ -89,17 +89,18 @@
 		})
 
 		$('.navigation-link').on('click', function () {
+			if($(".burger").is(":visible")){
+				$(".navigation-links").removeClass('active-links')
+				$(".burger").removeClass('toggle')
+				$(".navigation-link").css("opacity", "0")
 
-			$(".navigation-links").removeClass('active-links')
-			$(".burger").removeClass('toggle')
+				$('.navigation-link').each(function (index, item) {
 
-			$(".navigation-link").css("opacity", "0")
+					$(item).css("animation", "");
 
-			$('.navigation-link').each(function (index, item) {
-
-				$(item).css("animation", "");
-
-			});
+				});
+			}
+			
 		})
 
 		//slick slider
